@@ -25,7 +25,7 @@ function App() {
           if (latitude && longitude) {
             try {
               const response = await fetch(
-                `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyDEiMQCsYBlGrO5eaOh1BaBWeFNxjHeoek&amp;sensor=false&amp;ver=6.6.1`
+                `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${GOOGLE_MAP_API}&amp;sensor=false&amp;ver=6.6.1`
               );
               if (!response.ok) {
                 throw new Error("Failed to fetch location information");
@@ -60,7 +60,7 @@ function App() {
   const fetchLocation = async (loc) => {
     try {
       const response = await fetch(
-        `https://api.weatherapi.com/v1/current.json?key=470204652b3b4043ad961553242908&q=${loc}&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=${WEATHER_API}&q=${loc}&aqi=no`
       );
       const data = await response.json();
       setLocation({
