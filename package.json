@@ -19,6 +19,7 @@
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build"
   },
+  "homepage": "http://hridyamohan.github.io/Weather",
   "eslintConfig": {
     "extends": [
       "react-app",
