@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { GOOGLE_MAP_API, WEATHER_API } from "./config";
 import "./App.css";
 
 function App() {
