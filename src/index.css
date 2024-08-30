@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  padding: 0 10%;
+  overflow-x: hidden;
+  position: relative;
+}
+.day {
+  background: url("images/day.jpg") no-repeat 50% 0%;
+  background-size: cover;
+}
+.day p, .day span {
+  color: #121212 !important;
+}
+.night {
+  background: url("images/night.jpg") no-repeat 50% 0%;
+  background-size: cover;
+}
+.cityName {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: 0 0 30px;
+}
+.cityName h1 {
+  font-size: 80px;
+  line-height: 150%;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+.cityName p {
+  font-size: 32px;
+  line-height: 150%;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+.time {
+  display: block;
+  position: absolute;
+  font-size: 30px;
+  line-height: 150%;
+  font-weight: 600;
+  color: #ffffff;
+  top: 0;
+  text-align: left;
+  padding: 20px 0;
+}
+.time h2 {
+  font-size: 80px;
+  line-height: 100%;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 10px 0 0;
+  text-transform: uppercase;
+}
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 15vh 0 0;
+}
+.gridBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 30px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  img {
+    width: auto;
+    display: block;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+  span {
+    width: 100%;
+    display: block;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 500;
+    margin: 0;
+    color: #ffffff;
+  }
+  p {
+    font-size: 45px;
+    line-height: 120%;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+  }
+  &.fullWidth {
+    width: 100%;
+    grid-column: 1 / 5;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    img {
+      flex: 0 0 40px;
+      margin: 0 20px 0 0;
+    }
+  }
+}
+p {
+  white-space: wrap;
+  word-break: break-word;
+}
